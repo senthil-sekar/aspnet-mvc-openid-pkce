@@ -38,7 +38,7 @@ namespace aspnet_mvc_openid_pkce
                 Authority = "https://idp.example.com/",
                 ClientId = "myclient",
                 RedirectUri = "https://localhost:44361",
-                CallbackPath = new PathString("/"), // *** Critical to prevent infinite loop, when running in server ***
+                CallbackPath = new PathString("/"), // *** Critical to prevent infinite loop, when running in server *** Also dont forget to include virtual diretory name, if you have one. 
                 PostLogoutRedirectUri = "https://localhost:44361",
 
                 // indicates idp to return authorization code. id_token is not returned, providing us the extra layer of security. 
